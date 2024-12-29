@@ -1,4 +1,4 @@
-### English
+#### English
 
 # Flet IntraChat
 
@@ -52,7 +52,7 @@ This project is licensed under the MIT License.
 
 ---
 
-### Português
+#### Português
 
 # Flet IntraChat
 
