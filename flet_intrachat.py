@@ -44,3 +44,13 @@ def main(pagina):
 
     # Janela modal para capturar o nome do usuário
     janela = ft.AlertDialog(title=titulo_janela, content=campo_nome_usuario, actions=[botao_entrar])
+
+        # Função para abrir o popup inicial
+    def abrir_popup(evento):
+        pagina.dialog = janela  # Define o popup como o diálogo ativo
+        janela.open = True  # Abre o popup
+        pagina.update()  # Atualiza a interface
+
+    # Botão inicial para abrir o popup de entrada
+    botao_iniciar = ft.ElevatedButton("Iniciar Chat", on_click=abrir_popup,
+                                       bgcolor="#2980B9", color="white")  # Azul corporativo
