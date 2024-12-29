@@ -25,3 +25,13 @@ def main(pagina):
     chat = ft.Column(scroll="always")  # Contêiner das mensagens com scroll habilitado
     linha_mensagem = ft.Row([texto_mensagem, botao_enviar])  # Combinação do campo e botão "Enviar"
 
+        # Função para entrar no chat
+    def entrar_chat(evento):
+        pagina.remove(titulo)  # Remove o título inicial
+        pagina.remove(botao_iniciar)  # Remove o botão inicial
+        janela.open = False  # Fecha o popup
+        pagina.add(chat)  # Adiciona o contêiner do chat
+        pagina.add(linha_mensagem)  # Adiciona a linha com o campo de texto e botão
+        texto_entrou_chat = f"{campo_nome_usuario.value} entrou no chat"  # Mensagem de entrada
+        pagina.pubsub.send_all(texto_entrou_chat)  # Notifica os participantes
+        pagina.update()  # Atualiza a interface
