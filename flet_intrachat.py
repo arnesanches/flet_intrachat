@@ -16,7 +16,14 @@ def main(pagina):
 
     pagina.pubsub.subscribe(enviar_mensagem_tunel)  # Inscreve a função no canal de mensagens
 
-        # Campo para digitar mensagens
+    # Função para enviar uma mensagem
+    def enviar_mensagem(evento):
+        texto = f"{campo_nome_usuario.value}: {texto_mensagem.value}"  # Formata a mensagem
+        pagina.pubsub.send_all(texto)  # Envia a mensagem para todos os inscritos
+        texto_mensagem.value = ""  # Limpa o campo de texto
+        pagina.update()  # Atualiza a interface
+
+    # Campo para digitar mensagens
     texto_mensagem = ft.TextField(label="Digite sua mensagem:", on_submit=enviar_mensagem,
                                    bgcolor="#FFFFFF", border_color="#BDC3C7", color="#000000")
     botao_enviar = ft.ElevatedButton("Enviar", on_click=enviar_mensagem,  # Botão para enviar mensagem
@@ -25,7 +32,7 @@ def main(pagina):
     chat = ft.Column(scroll="always")  # Contêiner das mensagens com scroll habilitado
     linha_mensagem = ft.Row([texto_mensagem, botao_enviar])  # Combinação do campo e botão "Enviar"
 
-        # Função para entrar no chat
+    # Função para entrar no chat
     def entrar_chat(evento):
         pagina.remove(titulo)  # Remove o título inicial
         pagina.remove(botao_iniciar)  # Remove o botão inicial
@@ -36,7 +43,7 @@ def main(pagina):
         pagina.pubsub.send_all(texto_entrou_chat)  # Notifica os participantes
         pagina.update()  # Atualiza a interface
 
-        # Campo para o usuário digitar o nome antes de entrar no chat
+    # Campo para o usuário digitar o nome antes de entrar no chat
     campo_nome_usuario = ft.TextField(label="Escreva seu nome no chat:", on_submit=entrar_chat,
                                        bgcolor="#FFFFFF", border_color="#BDC3C7", color="#000000")
     botao_entrar = ft.ElevatedButton("Entrar no chat", on_click=entrar_chat,  # Botão para entrar no chat
@@ -45,7 +52,7 @@ def main(pagina):
     # Janela modal para capturar o nome do usuário
     janela = ft.AlertDialog(title=titulo_janela, content=campo_nome_usuario, actions=[botao_entrar])
 
-        # Função para abrir o popup inicial
+    # Função para abrir o popup inicial
     def abrir_popup(evento):
         pagina.dialog = janela  # Define o popup como o diálogo ativo
         janela.open = True  # Abre o popup
@@ -54,3 +61,9 @@ def main(pagina):
     # Botão inicial para abrir o popup de entrada
     botao_iniciar = ft.ElevatedButton("Iniciar Chat", on_click=abrir_popup,
                                        bgcolor="#2980B9", color="white")  # Azul corporativo
+
+    # Adiciona o título e botão inicial à página
+    pagina.add(titulo, botao_iniciar)
+
+# Executa o app no navegador
+ft.app(main, view=ft.WEB_BROWSER)
