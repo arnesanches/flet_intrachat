@@ -35,3 +35,12 @@ def main(pagina):
         texto_entrou_chat = f"{campo_nome_usuario.value} entrou no chat"  # Mensagem de entrada
         pagina.pubsub.send_all(texto_entrou_chat)  # Notifica os participantes
         pagina.update()  # Atualiza a interface
+
+        # Campo para o usuário digitar o nome antes de entrar no chat
+    campo_nome_usuario = ft.TextField(label="Escreva seu nome no chat:", on_submit=entrar_chat,
+                                       bgcolor="#FFFFFF", border_color="#BDC3C7", color="#000000")
+    botao_entrar = ft.ElevatedButton("Entrar no chat", on_click=entrar_chat,  # Botão para entrar no chat
+                                      bgcolor="#2980B9", color="white")  # Azul corporativo
+
+    # Janela modal para capturar o nome do usuário
+    janela = ft.AlertDialog(title=titulo_janela, content=campo_nome_usuario, actions=[botao_entrar])
