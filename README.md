@@ -2,7 +2,7 @@
 
 # Flet IntraChat
 
-Flet IntraChat is an innovative project that aims to improve internal communication in business environments. This internal chatbox operates without the need for the internet, using the organization's intranet infrastructure. It provides fast, accessible, and efficient interaction between employees, eliminating the need for emails or external applications.
+Flet IntraChat is a project designed to optimize internal communication in business environments. This internal chatbox operates without the need for internet, utilizing the organization's intranet infrastructure, providing fast, accessible, and efficient interaction among team members, and eliminating the need for emails or external applications.
 
 The choice of the Flet framework for the development of this project was strategic: with a single script, it is possible to create applications, websites, and computer programs. This flexibility allows Flet IntraChat to adapt to different needs and platforms.
 
@@ -56,7 +56,7 @@ This project is licensed under the MIT License.
 
 # Flet IntraChat
 
-O Flet IntraChat é um projeto inovador que visa melhorar a comunicação interna em ambientes empresariais. Este chatbox interno opera sem a necessidade de internet, utilizando a infraestrutura de intranet da organização. Ele proporciona uma interação rápida, acessível e eficiente entre os colaboradores, eliminando a necessidade de e-mails ou aplicativos externos.
+O Flet IntraChat é um projeto desenvolvido para otimizar a comunicação interna em ambientes empresariais. Este chatbox opera sem a necessidade de internet, utilizando a infraestrutura de intranet da organização, proporcionando uma interação rápida, acessível e eficiente entre os colaboradores, e eliminando a dependência de e-mails ou aplicativos externos.
 
 A escolha do framework Flet para o desenvolvimento deste projeto foi estratégica: com um único script, é possível criar aplicativos, sites e programas de computador. Essa flexibilidade permite que o Flet IntraChat se adapte a diferentes necessidades e plataformas.
 
