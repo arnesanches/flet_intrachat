@@ -68,29 +68,39 @@ A escolha do framework Flet para o desenvolvimento deste projeto foi estratégic
 *   **Flexibilidade multiplataforma:** Compatível com aplicativos, sites e programas de computador.
 *   **Fácil integração:** Adapta-se ao ambiente corporativo, promovendo uma comunicação interna eficaz.
 
-## Requisitos
+## Pré-requisitos
 
-*   Python 3.8+
-*   Biblioteca Flet (instale com `pip install flet`)
-
-## Como executar o projeto
-
-1.  Certifique-se de que a intranet esteja configurada e acessível para todos os dispositivos que utilizarão o chat.
-2.  Copie o código fornecido e salve-o em um arquivo, por exemplo, `flet_intrachat.py`.
-3.  Execute o script no terminal:
+*   Certifique-se de que a intranet esteja configurada e acessível para todos os dispositivos que utilizarão o chat.
+*   Certifique-se de ter o Python 3.7 ou superior instalado. Você pode baixar a versão mais recente em [https://www.python.org/downloads/](https://www.python.org/downloads/).
+*   **Instale o framework Flet:** Para executar este script, você precisa ter o Flet instalado. Use o seguinte comando no seu terminal:
 
     ```bash
-    python flet_intrachat.py
+    pip install flet
     ```
+    
+## Como acessar e compartilhar o Flet IntraChat
 
-4.  Um navegador será aberto automaticamente, exibindo a interface do chat.
-5.  Clique no botão "Iniciar Chat" e insira seu nome para entrar no ambiente de comunicação.
-6.  Digite sua mensagem no campo e clique em "Enviar" para que ela seja compartilhada com todos os participantes.
+**Iniciando e Compartilhando o Acesso:**
 
-## Observações importantes
+1.  **Preparação do Script:** Abra o arquivo `flet_intrachat.py` e copie o código ou baixe o arquivo `flet_intrachat.py` localizado neste diretório diretamente para o seu computador. 
+2.  **Execução e Geração do Link:** Apenas um colaborador executa o script Python no seu computador através do terminal: `python flet_intrachat.py`. Um navegador será aberto automaticamente, exibindo a interface do chat. Ao executar, um link único é gerado e exibido na janela do navegador. Este link deve ser compartilhado com os demais participantes.
+3.  **Acesso via Navegador:** Os outros colaboradores acessam o chat diretamente pelo navegador, sem a necessidade de instalar o Python ou executar o script.
 
-*   Após executar o código, é necessário encerrar o terminal ou pressionar `CTRL+C` para liberar a porta de execução antes de rodar novamente.
-*   Este projeto é ideal para empresas que buscam melhorar a comunicação interna e manter a interação entre os colaboradores rápida e acessível.
+**Utilizando o Chat:**
+
+1.  **Iniciando a Conversa:** Clique no botão "Iniciar Chat" e insira seu nome para entrar no ambiente de comunicação.
+2.  **Enviando Mensagens:** Digite sua mensagem no campo e clique em "Enviar" para que ela seja compartilhada com todos os participantes.
+3.  **Encerrando o Script (Após o Uso):** Após finalizar o uso do chat, para liberar a porta de execução e permitir que o script seja executado novamente, encerre o processo no terminal pressionando `CTRL+C` ou fechando a janela do terminal.
+
+**Informações Importantes sobre os Links:**
+
+*   **Links Dinâmicos:** A cada execução ou reinicialização do script, um novo link é gerado. O link anterior se torna imediatamente inválido, exigindo o compartilhamento do novo link para continuar o acesso ao chat.
+
+**Vantagens:**
+
+*   **Praticidade:** Apenas um computador com o Python e o script é necessário para iniciar o chat, simplificando a configuração.
+*   **Acesso Simplificado:** Os participantes acessam o chat facilmente através de um link no navegador, sem a necessidade de instalações adicionais, tornando o acesso mais rápido e conveniente.
+*   **Melhoria da Comunicação Interna:** Ideal para empresas que buscam otimizar a comunicação entre colaboradores, promovendo uma interação mais ágil e eficaz.
 
 ## Personalização
 
